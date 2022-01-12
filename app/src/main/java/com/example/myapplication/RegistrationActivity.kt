@@ -1,7 +1,7 @@
 package com.example.myapplication
 
-import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -10,21 +10,18 @@ import com.google.firebase.auth.FirebaseAuth
 
 class RegistrationActivity : AppCompatActivity() {
     private lateinit var editTextEmail:EditText
-    private lateinit var editTextPassword:EditText
-    private lateinit var editTextPasswordConfirm:EditText
-    private lateinit var buttonRegister:Button
+    private lateinit var editTextPassword : EditText
+    private lateinit var editTextPasswordConfirm : EditText
+    private lateinit var buttonRegister : Button
 
 
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onCreate(savedInstanceState, persistentState)
         setContentView(R.layout.activity_registration)
 
         init()
 
         registerListener()
-
 
     }
 
@@ -36,34 +33,30 @@ class RegistrationActivity : AppCompatActivity() {
     }
 
     private fun registerListener(){
-
-        buttonRegister.setOnClickListener(){
+        buttonRegister.setOnClickListener() {
             val email = editTextEmail.text.toString()
             val password = editTextPassword.text.toString()
             val pass = editTextPasswordConfirm.text.toString()
 
-            if (pass != password){
-                Toast.makeText(this, "Incorrect Password!", Toast.LENGTH_SHORT).show()
+            if (pass != password) {
+                Toast.makeText(this, "Incorrect Password", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            if (email.isEmpty() || password.isEmpty()){
+            if (email.isEmpty() || password.isEmpty() || pass.isEmpty()){
                 Toast.makeText(this, "Empty!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            FirebaseAuth
-                .getInstance()
-                .createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful){
-                        startActivity(Intent(this, LoginActivity::class.java))
-                        finish()
-                    }else{
-                        Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show()
-                    }
+            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+                if (task.isSuccessful){
+                    Toast.makeText(this, "თქვენ წარმატებით დარეგისტრირდით!", Toast.LENGTH_SHORT).show()
+                    finish()
+                }else{
+                    Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show()
                 }
+            }
         }
-
     }
+
 }
