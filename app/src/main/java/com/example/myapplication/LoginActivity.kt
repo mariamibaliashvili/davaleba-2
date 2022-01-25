@@ -20,10 +20,6 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (FirebaseAuth.getInstance().currentUser!=null){
-            gotoProfile()
-        }
-
         setContentView(R.layout.activity_login)
 
         init()

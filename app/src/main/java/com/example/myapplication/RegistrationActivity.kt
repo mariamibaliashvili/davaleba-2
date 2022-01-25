@@ -1,7 +1,7 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -15,8 +15,8 @@ class RegistrationActivity : AppCompatActivity() {
     private lateinit var buttonRegister : Button
 
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
 
         init()
@@ -50,8 +50,7 @@ class RegistrationActivity : AppCompatActivity() {
 
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
                 if (task.isSuccessful){
-                    Toast.makeText(this, "თქვენ წარმატებით დარეგისტრირდით!", Toast.LENGTH_SHORT).show()
-                    finish()
+                    startActivity(Intent(this, ProfileActivity::class.java))
                 }else{
                     Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show()
                 }
