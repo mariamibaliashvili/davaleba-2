@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.example.myapplication.models.UserInfo
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -22,6 +23,7 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var save : Button
     private lateinit var buttonPasswordChange:Button
     private lateinit var buttonLogout: Button
+    private lateinit var home : Button
     private val db = FirebaseDatabase.getInstance().getReference("UserInfo")
     private val auth = FirebaseAuth.getInstance()
 
@@ -37,7 +39,9 @@ class ProfileActivity : AppCompatActivity() {
         db.child(auth.currentUser?.uid!!).addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 val userInfo : UserInfo = snapshot.getValue(UserInfo::class.java)?: return
-                userName.text = userInfo.name
+                textView.text = userInfo.name
+                Glide.with(this@ProfileActivity)
+                    .load(userInfo.imageUrl).placeholder(R.drawable.ic_launcher_foreground).into(profilePhoto)
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -57,6 +61,7 @@ class ProfileActivity : AppCompatActivity() {
         save=findViewById(R.id.save)
         buttonPasswordChange=findViewById(R.id.buttonPasswordChange)
         buttonLogout=findViewById(R.id.buttonLogout)
+        home=findViewById(R.id.home)
     }
 
     private fun registerListener(){
@@ -81,6 +86,9 @@ class ProfileActivity : AppCompatActivity() {
         buttonPasswordChange.setOnClickListener(){
             startActivity(Intent(this, PasswordChangeActivity::class.java))
 
+        }
+        home.setOnClickListener(){
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
     }

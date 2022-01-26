@@ -1,6 +1,5 @@
 package com.example.myapplication
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -50,7 +49,8 @@ class RegistrationActivity : AppCompatActivity() {
 
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
                 if (task.isSuccessful){
-                    startActivity(Intent(this, ProfileActivity::class.java))
+                    Toast.makeText(this, "თქვენ წარმატებით დარეგისტრირდით!", Toast.LENGTH_SHORT).show()
+                    finish()
                 }else{
                     Toast.makeText(this, "Error!", Toast.LENGTH_SHORT).show()
                 }

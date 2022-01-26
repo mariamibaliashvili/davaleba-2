@@ -8,57 +8,65 @@
 
     <ImageView
         android:id="@+id/profilePhoto"
-        android:layout_marginTop="20dp"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:textSize="20sp"
-        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User name" />
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="User name"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
     <EditText
-        android:layout_marginTop="40dp"
-        android:hint="Photo link"
         android:id="@+id/photoLink"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="Photo link" />
 
     <EditText
         android:id="@+id/userName"
-        android:hint="User name"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="User name" />
 
     <Button
-        android:text="save"
         android:id="@+id/save"
-        android:layout_marginTop="20dp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="save" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Home"
         android:layout_gravity="center"/>
 
     <Button
-        android:text="Change password"
         android:id="@+id/buttonPasswordChange"
         android:layout_width="200dp"
-        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_height="wrap_content"/>
+        android:layout_marginTop="50dp"
+        android:text="Change password" />
+
     <Button
-        android:text="Logout"
         android:id="@+id/buttonLogout"
         android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_height="wrap_content"/>
+        android:text="Logout" />
 
 
 </LinearLayout>
