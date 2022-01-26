@@ -10,6 +10,7 @@
         <entry key="..\:/Users/maria/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_registration.xml" value="0.264" />
         <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.278125" />
         <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/activity_details.xml" value="0.25" />
         <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/activity_login.xml" value="0.17407407407407408" />
         <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/activity_password_change.xml" value="0.25" />
@@ -17,7 +18,11 @@
         <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/activity_profile.xml" value="0.264" />
         <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/activivty_profile.xml" value="0.25" />
         <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/fragment_authors.xml" value="0.25" />
-        <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/fragment_details.xml" value="0.25" />
+        <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/fragment_first.xml" value="0.25" />
+        <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/fragment_second.xml" value="0.25" />
+        <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/fragment_third.xml" value="0.25" />
         <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/item_cakes.xml" value="0.25" />
         <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/layout/list_item.xml" value="0.25" />
         <entry key="..\:/Users/maria/AndroidStudioProjects/davaleba-2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.26197916666666665" />
