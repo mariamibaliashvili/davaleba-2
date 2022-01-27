@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.DetailsActivity
 import com.example.myapplication.R
 
-class FragmentHome : Fragment(R.layout.fragment_home){
+class Cakes : Fragment(R.layout.fragment_home){
 
     private lateinit var buttonDetails:Button
 
